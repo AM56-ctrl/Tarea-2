@@ -1,1 +1,5 @@
 # Tarea-2
+
+El script funciona como una herramienta básica de escaneo de puertos y banner grabbing hecha en Python. Primero, el programa define una dirección IP y revisa los puertos del 1 al 200 (pero dice en el codigo del 1, 201 pues hay un numero excluyente)uno por uno usando la librería socket. Para cada puerto, intenta conectarse con la función connect_ex(); si esta devuelve 0, significa que el puerto está abierto. Cuando se detecta un puerto abierto, el script intenta obtener el banner del servicio que está corriendo en ese puerto utilizando recv(1024). Además, se usa un tiempo de espera de 2 segundos para evitar que el programa se quede bloqueado si un puerto no responde.
+
+Para ejecutar el script, se debe guardar el archivo con extensión .py, por ejemplo port_scanner.py, abrir la terminal en la carpeta donde está guardado y ejecutarlo con el comando python port_scanner.py o python3 port_scanner.py. Para prácticas escolares, se recomienda usar la IP 10.1.2.15, que corresponde mi ip privado.
